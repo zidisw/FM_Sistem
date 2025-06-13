@@ -486,9 +486,9 @@ def main():
         if 'model' not in st.session_state:
             try:
                 with st.spinner('Memproses hasil tes...'):
-                    st.session_state.model = load_model(os.path.join(BASE_DIR, "../model/embedding_model.h5"), compile=False)
-                    st.session_state.scaler = joblib.load(os.path.join(BASE_DIR, "../model/scaler.pkl"))
-                    st.session_state.df_pivot = pd.read_csv(os.path.join(BASE_DIR, "../dataset/job_with_family.csv"))
+                    st.session_state.model = load_model(os.path.join(BASE_DIR, "../Model/embedding_model.h5"), compile=False)
+                    st.session_state.scaler = joblib.load(os.path.join(BASE_DIR, "../Model/scaler.pkl"))
+                    st.session_state.df_pivot = pd.read_csv(os.path.join(BASE_DIR, "../Dataset/job_with_family.csv"))
             except Exception as e:
                 st.error(f"Failed to load resources: {str(e)}")
                 st.stop()
